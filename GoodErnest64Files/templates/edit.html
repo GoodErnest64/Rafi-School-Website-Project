@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}تدوین{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.8);height:fit-content;">
+    <div class="row">
+        <div>
+            {% if post["img"] != None %}
+                <form action="{{ url_for('edit', idd=post['id']) }}" method="post" enctype="multipart/form-data" style="color:white;text-align: center;margin-top: 10px;">
+                    <label for="img">
+                        عکس (اختیاری) :
+                        <input type="file" name="img" class="btn btn-primary">
+                    </label><br/>
+                    <label for="title" style="margin: 5px;margin-top: 10px;" required>عنوان : &nbsp;</label><br/>
+                    <input name="title" style="width:70vw" placeholder="عنوان" value="{{ post['title'] }}">
+                    <label for="content" style="margin: 5px;margin-bottom: 10px;" required>محتوا : &nbsp;<br/>
+                        <textarea name="content" style="width:70vw;height:20rem;" placeholder="محتوا">{{ post['content'] }}</textarea>
+                    <div style="color:red;margin-bottom: 10px;">{{ msg }}</div>
+                    <a class="btn btn-danger" onclick="return confirm('آیا از حذف کردن این پست اطمینان دارید ؟')" href="{{ url_for('delete', idd=post['id'])}}">حذف</a>
+                    <button type="submit" class="btn btn-primary">اعمال</button>
+                </form>
+            {% else %}
+                <form action="{{ url_for('edit', idd=post['id']) }}" method="post" enctype="multipart/form-data" style="color:white;text-align: center;margin-top: 10px;">
+                    <label for="img">
+                        عکس (اختیاری) :
+                        <input type="file" name="img" class="btn btn-primary">
+                    </label><br/>
+                    <label for="title" style="margin: 5px;margin-top: 10px;" required>عنوان : &nbsp;</label><br/>
+                    <input name="title" style="width:70vw" placeholder="عنوان" value="{{ post['title'] }}">
+                    <label for="content" style="margin: 5px;margin-bottom: 10px;" required>محتوا : &nbsp;<br/>
+                        <textarea name="content" style="width:70vw;height:20rem;" placeholder="محتوا">{{ post['content'] }}</textarea>
+                    <div style="color:red;margin-bottom: 10px;">{{ msg }}</div>
+                    <a class="btn btn-danger" onclick="return confirm('آیا از حذف کردن این پست اطمینان دارید ؟')" href="{{ url_for('delete', idd=post['id'])}}">حذف</a>
+                    <button type="submit" class="btn btn-primary">اعمال</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

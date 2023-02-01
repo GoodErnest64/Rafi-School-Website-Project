@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}ورود{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.8);height:80vh;">
+    <div class="row">
+        <div>
+			<form action="{{ url_for('login') }}" method="post" style="color:white;text-align: center;margin-top: 13%;">
+				<label for="username" style="margin: 5px;margin-top: 10px;" required>نام کاربری : &nbsp;<input name="username" style="width:70vw" placeholder="نام کاربری"></label><br/>
+				<label for="password" style="margin: 5px;margin-bottom: 10px;" required>گذرواژه : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="password" style="width:70vw" placeholder="گذرواژه"></label><br/>
+				<div style="color:red;margin-bottom: 10px;">{{ msg }}</div>
+				<button type="submit" class="btn btn-primary">ورود</button>
+			</form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

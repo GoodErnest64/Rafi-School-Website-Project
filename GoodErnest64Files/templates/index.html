@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}مدرسه رفیع{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.8);">
+	<div class="row">
+		{% if "loggedin" not in session %}
+			{% for post in posts %}
+				{% if post["img"] != None %}
+					<div class="card" style="text-align: right;">
+						<img class="img-top" src="{{ url_for('static', filename='user_images/' + post['img']) }}">
+						<div class="card-body">
+							<h4 class="card-title">{{ post["title"] }}</h4>
+							<p class="card-text">{{ post["content"] }}</p>
+						</div>
+						<div class="card-footer">
+							<p class="card-text text-muted">{{ post["created"] }}</p>
+						</div>
+					</div>
+				{% else %}
+					<div class="card" style="text-align: right;">
+						<div class="card-body">
+							<h4 class="card-title">{{ post["title"] }}</h4>
+							<p class="card-text">{{ post["content"] }}</p>
+						</div>
+						<div class="card-footer">
+							<p class="card-text text-muted">{{ post["created"] }}</p>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% else %}
+			{% for post in posts %}
+				{% if post["img"] != None %}
+					<div class="card" style="text-align: right;">
+						<img class="img-top" src="{{ url_for('static', filename='user_images/' + post['img']) }}">
+						<div class="card-body">
+							<h4 class="card-title">{{ post["title"] }}</h4>
+							<p class="card-text">{{ post["content"] }}</p>
+							<a class="btn btn-primary" href="{{ url_for('edit', idd=post['id'])}}">تدوین</a>
+							<a class="btn btn-danger" onclick="return confirm('آیا از حذف کردن این پست اطمینان دارید ؟')" href="{{ url_for('delete', idd=post['id'])}}">حذف</a>
+						</div>
+						<div class="card-footer">
+							<p class="card-text text-muted">{{ post["created"] }}</p>
+						</div>
+					</div>
+				{% else %}
+					<div class="card" style="text-align: right;">
+						<div class="card-body">
+							<h4 class="card-title">{{ post["title"] }}</h4>
+							<p class="card-text">{{ post["content"] }}</p>
+							<a class="btn btn-primary" href="{{ url_for('edit', idd=post['id'])}}">تدوین</a>
+							<a class="btn btn-danger" onclick="return confirm('آیا از حذف کردن این پست اطمینان دارید ؟')" href="{{ url_for('delete', idd=post['id'])}}">حذف</a>
+						</div>
+						<div class="card-footer">
+							<p class="card-text text-muted">{{ post["created"] }}</p>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+		<a class="btn btn-primary" href="/posts" style="width:40vw;margin-right:30vw;margin-top: 1rem;margin-bottom: 1rem;">بقیه مطالب...</a>
+	</div>
+</div>
+{% endblock %}
