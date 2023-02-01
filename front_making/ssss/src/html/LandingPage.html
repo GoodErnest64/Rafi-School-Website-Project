@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fa_IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Landing Page</title>
+    <link rel="icon" type="image/x-icon" href="../assets/Untitled-4-2.png" />
+  </head>
+
+  <body style="direction: rtl">
+    <main class="container mx-auto h-screen font-Vazir text-center">
+      <!--navbar-->
+
+      <section class="hidden md:block">
+        <nav class="p-4 flex justify-between items-center">
+          <!-- NAVBAR ONE -->
+          <div class="flex items-center">
+            <div>
+              <img
+                src="../assets/Untitled-4-2.png"
+                alt="لوگو"
+                class="w-[70px]"
+              />
+            </div>
+            <ul class="flex">
+              <li
+                class="mr-4 cursor-pointer rounded-md hover:bg-[#7494E0] hover:text-white font-bold p-3 transition-all"
+              >
+                صفحه اصلی
+              </li>
+              <li
+                class="mr-4 cursor-pointer rounded-md hover:bg-[#7494E0] hover:text-white font-bold p-3 transition-all"
+              >
+                وبلاگ
+              </li>
+              <li
+                class="mr-4 cursor-pointer rounded-md hover:bg-[#7494E0] hover:text-white font-bold p-3 transition-all"
+              >
+                لیست کادر اجرایی
+              </li>
+              <li
+                class="mr-4 cursor-pointer rounded-md hover:bg-[#7494E0] hover:text-white font-bold p-3 transition-all"
+              >
+                لیست دانش آموزان برتر
+              </li>
+              <li
+                class="mr-4 cursor-pointer rounded-md hover:bg-[#7494E0] hover:text-white font-bold p-3 transition-all"
+              >
+                درباره ما
+              </li>
+            </ul>
+          </div>
+          <!-- NAVBAR TOW-->
+          <div>
+            <button
+              type="submit"
+              class="flex bg-[#7494E0] text-white p-3 rounded-xl"
+            >
+              <span class="ml-2"> ورود کادر اجرایی</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </nav>
+      </section>
+
+      <section class="block md:hidden">
+        <nav class="flex items-center justify-between p-4">
+          <div>
+            <img src="../assets/Untitled-4-2.png" alt="لوگو" class="w-[60px]" />
+          </div>
+          <div class="flex items-center">
+            <div>
+                <button
+                  type="submit"
+                  class="flex bg-[#7494E0] text-white p-2 rounded-xl"
+                >
+                  <span class="ml-2"> ورود کادر اجرایی</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+            </div>
+            <div class="space-y-2 mr-3" style="direction: ltr;">
+                <span class="block w-5 h-0.5 bg-gray-600"></span>
+                <span class="block w-8 h-0.5 bg-gray-600"></span>
+                <span class="block w-8 h-0.5 bg-gray-600"></span>
+              </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- SECTION ONE -->
+
+      <section
+        class="grid mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 p-4"
+      >
+        <div
+          class="bg-white shadow-md border border-[#ccc] rounded-md flex flex-col w-[300px]"
+        >
+          <div class="m-4">
+            <img
+              src="../assets/2420091.jpg"
+              class="w-[100%] text-center mx-auto rounded-lg"
+            />
+          </div>
+          <div class="flex flex-col p-4">
+            <span class="font-bold text-right">عنوان جدید</span>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+            </p>
+          </div>
+          <div
+            class="flex justify-center text-center bg-[#e9e9e9] mt-4 p-4 items-center"
+          >
+            <span class="text-[#5d5d5d] text-center">1401/2/5</span>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-md border border-[#ccc] rounded-md flex flex-col w-[300px]"
+        >
+          <div class="m-4">
+            <img
+              src="../assets/2420091.jpg"
+              class="w-[100%] text-center mx-auto rounded-lg"
+            />
+          </div>
+          <div class="flex flex-col p-4">
+            <span class="font-bold text-right">عنوان جدید</span>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+            </p>
+          </div>
+          <div
+            class="flex justify-center text-center bg-[#e9e9e9] mt-4 p-4 items-center"
+          >
+            <span class="text-[#5d5d5d] text-center">1401/2/5</span>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-md border border-[#ccc] rounded-md flex flex-col w-[300px]"
+        >
+          <div class="m-4">
+            <img
+              src="../assets/2420091.jpg"
+              class="w-[100%] text-center mx-auto rounded-lg"
+            />
+          </div>
+          <div class="flex flex-col p-4">
+            <span class="font-bold text-right">عنوان جدید</span>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+            </p>
+          </div>
+          <div
+            class="flex justify-center text-center bg-[#e9e9e9] mt-4 p-4 items-center"
+          >
+            <span class="text-[#5d5d5d] text-center">1401/2/5</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
