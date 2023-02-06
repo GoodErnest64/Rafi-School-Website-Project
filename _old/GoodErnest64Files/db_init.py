@@ -22,8 +22,8 @@ cur = connection.cursor()
 #
 #cur.execute("INSERT INTO posts (img, title, content) VALUES (?, ?, ?)",
 #            (None, "سینا", "پست 5 برای تست متن اضافه هم ندارم که اضافه کنمممممممم . . . ."))
-posts = cur.execute("SELECT * FROM posts")
-for post in posts:
-    cur.execute("DELETE FROM posts WHERE id = ?", (post["id"]))
+# posts = cur.execute("SELECT * FROM posts")
+# for post in posts:
+#     cur.execute("DELETE FROM posts WHERE id = ?", (post["id"]))
 connection.commit()
 connection.close()
